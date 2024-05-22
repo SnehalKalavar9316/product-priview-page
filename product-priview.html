@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product-Review Page</title>
+    <style>
+        #main-product-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            margin: 20px auto;
+            display: block;
+
+        }
+
+        .product-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .product-img-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img-1.jpg" id="main-product-img" />
+    <div class="product-img-container">
+        <img src="img-1.jpg" class="product-img" onclick="changeImg('img-1.jpg')" />
+        <img src="img-2.jpg" class="product-img" onclick="changeImg('img-2.jpg')" />
+        <img src="img-3.jpg" class="product-img" onclick="changeImg('img-3.jpg')" />
+        <img src="img-4.jpg" class="product-img" onclick="changeImg('img-4.jpg')" />
+        <img src="img-5.jpg" class="product-img" onclick="changeImg('img-5.jpg')" />
+
+    </div>
+
+    <script>
+        function changeImg(imageName) {
+            const mainImg = document.getElementById('main-product-img');
+            mainImg.src = imageName;
+
+        }
+    </script>
+</body>
+
+</html>
